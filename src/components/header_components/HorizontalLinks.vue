@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'HeaderLinks',
+    name: 'HorizontalLinks',
     data: () => ({}),
     props: {
         links: Array
@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-    <nav id="header-menu">
+    <nav id="menu">
         <ul>
             <li v-for="(link, i) in links" :key="i">
                 <a :href="link.url" :class="{ 'active': link.current }">{{ link.text.toUpperCase() }}</a>
@@ -20,18 +20,19 @@ export default {
 </template>
 
 
-<style scoped>
-#header-menu ul {
-    display: flex;
-    gap: 15px;
-    font-size: 14px;
-    font-weight: 600;
-}
+<style lang="scss" scoped>
+#menu {
+    ul {
+        display: flex;
+        gap: 15px;
+        font-size: 14px;
+        font-weight: 600;
 
-
-.active {
-    color: dodgerblue;
-    border-bottom: 5px solid dodgerblue;
-    padding-bottom: 35px;
+        .active {
+            color: dodgerblue;
+            border-bottom: 5px solid dodgerblue;
+            padding-bottom: 35px;
+        }
+    }
 }
 </style>
