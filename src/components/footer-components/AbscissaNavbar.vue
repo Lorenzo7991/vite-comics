@@ -24,9 +24,11 @@ export default {
 
 <style scoped lang="scss">
 nav {
+    position: relative;
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
-    padding-top: 20px;
+    padding: 20px 0;
 
     ul {
         display: flex;

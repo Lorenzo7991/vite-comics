@@ -1,16 +1,19 @@
 <script>
-export default {
-    name: '',
-    data: () => ({}),
-    components: {
+import ComicsGrid from './main-components/ComicsGrid.vue';
 
+export default {
+    name: 'AppMain',
+    data: () => ({}),
+    components: { ComicsGrid },
+    props: {
+        comics: Array
     }
 };
 </script>
 
 <template>
     <main>
-        <h1>...Contents goes here...</h1>
+        <ComicsGrid :comics="comics" />
     </main>
 </template>
 
@@ -18,9 +21,9 @@ export default {
 <style scoped>
 main {
     min-height: 150px;
-    background-color: rgb(32, 32, 32);
+    background-color: rgb(28, 28, 28);
     text-align: center;
-    line-height: 100px;
+    line-height: 140px;
     color: white;
 }
 </style>
