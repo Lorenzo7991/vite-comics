@@ -1,18 +1,27 @@
 <script>
-export default {
-    name: '',
-    data: () => ({}),
-    components: {
+import AbscissaNavbar from './footer-components/AbscissaNavbar.vue';
 
+
+export default {
+    name: 'AppFooter',
+    data: () => ({}),
+    components: { AbscissaNavbar, },
+    props: {
+        navLinks: Array
     }
 };
 </script>
 
 <template>
-    <!-- Template here -->
+    <footer>
+        <AbscissaNavbar :links="navLinks" />
+    </footer>
 </template>
 
 
 <style scoped>
-/* Style here */
+footer {
+    height: 120px;
+    background-color: dodgerblue;
+}
 </style>

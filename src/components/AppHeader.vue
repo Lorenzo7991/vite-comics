@@ -1,11 +1,11 @@
 <script>
-import HorizontalLinks from './header_components/HorizontalLinks.vue'
-import LogoSm from './header_components/LogoSm.vue'
+import AbscissaLinks from './header-components/AbscissaLinks.vue'
+import LogoSmall from './header-components/LogoSmall.vue'
 
 export default {
     name: 'AppHeader',
     data: () => ({}),
-    components: { HorizontalLinks, LogoSm, },
+    components: { AbscissaLinks, LogoSmall },
     props: {
         links: Array
     }
@@ -14,8 +14,8 @@ export default {
 
 <template>
     <header>
-        <LogoSm />
-        <HorizontalLinks :links="links" />
+        <LogoSmall />
+        <AbscissaLinks :links="links" />
     </header>
 </template>
 
@@ -29,6 +29,5 @@ header {
     flex-shrink: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
 }
 </style>

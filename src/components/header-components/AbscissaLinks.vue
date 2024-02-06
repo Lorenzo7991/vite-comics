@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'HorizontalLinks',
+    name: 'AbscissaLinks',
     data: () => ({}),
     props: {
         links: Array

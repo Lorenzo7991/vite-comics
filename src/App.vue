@@ -1,5 +1,6 @@
 <script>
 import { menuItems } from '@/assets/data/data.js';
+import { navbarLinks } from './assets/data/data.js';
 
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
@@ -10,19 +11,18 @@ import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'App',
   components: { AppHeader, AppMain, AppFooter },
-  data() {
-    return {
-      menuItems: menuItems,
-    };
-  },
+  data: () => ({
+    menuItems: menuItems,
+    navbarLinks: navbarLinks,
+  }),
 };
 </script>
 
 
 <template>
-  <AppHeader :links="menuItems" />
+  <AppHeader class="container" :links="menuItems" />
   <AppMain />
-  <AppFooter />
+  <AppFooter :navLinks="navbarLinks" />
 </template>
 
 
